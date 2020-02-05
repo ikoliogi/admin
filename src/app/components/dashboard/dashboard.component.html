@@ -1,1 +1,8 @@
-<p>dashboard works!</p>
+<h3>Dashboard</h3>
+
+<button (click)="getStats()" class="btn btn-outline-primary">Refresh</button>
+
+<chart
+  [type]="type"
+  [data]="data"
+  [options]="options"></chart>
