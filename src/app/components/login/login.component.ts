@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
       if (response.success) {
         this.alert = false;
         this.ls.store('token', response.token);
-        this.ls.store('user', response.user);
         this.router.navigate(['/']);
 
       } else {
@@ -50,8 +49,7 @@ export class LoginComponent implements OnInit {
         this.validationErrors = response.errors || [];
 
       }
-    })
-
+    });
 
     console.log(this.loginData);
 
